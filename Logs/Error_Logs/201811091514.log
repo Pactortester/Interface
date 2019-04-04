@@ -1,0 +1,19 @@
+2018-11-09 15:14:23,431 - test - ERROR - test_weather  - 22 - 测试用例执行出错: 查询天气
+Traceback (most recent call last):
+  File "G:\Interface\TestCase\test_weather.py", line 18, in test_weather
+    test2 = self.assertEqual(message,'Success !')
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\unittest\case.py", line 820, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\unittest\case.py", line 1193, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\unittest\case.py", line 665, in fail
+    raise self.failureException(msg)
+AssertionError: '接口一个星期前已经提示要停用,请更换新的接口,参照文档链接:https://www[42 chars]2884' != 'Success !'
+- 接口一个星期前已经提示要停用,请更换新的接口,参照文档链接:https://www.sojson.com/blog/305.html , 有问题请加QQ群:608222884
++ Success !
+
+2018-11-09 15:14:23,437 - test - ERROR - my_email  - 57 - 邮件发送失败
+Traceback (most recent call last):
+  File "G:\Interface\Common\my_email.py", line 39, in mail
+    att1 = MIMEText(open(file, 'rb').read(), 'base64', 'utf-8')
+FileNotFoundError: [Errno 2] No such file or directory: 'G:\\Interface\\report/xxx接口自动化测试报告.html'

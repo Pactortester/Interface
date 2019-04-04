@@ -1,0 +1,27 @@
+2018-11-09 15:14:22,922 - test - INFO - 执行测试用例：查询天气
+2018-11-09 15:14:22,923 - test - INFO - 请求的url：https://www.sojson.com/open/api/weather/json.shtml
+2018-11-09 15:14:23,430 - test - INFO - 请求的内容：{'city': '上海'}
+2018-11-09 15:14:23,430 - test - INFO - 获取返回的状态码:200
+2018-11-09 15:14:23,431 - test - INFO - 响应内容：{'status': 200, 'message': '接口一个星期前已经提示要停用,请更换新的接口,参照文档链接:https://www.sojson.com/blog/305.html , 有问题请加QQ群:608222884'}
+2018-11-09 15:14:23,431 - test - ERROR - 测试用例执行出错: 查询天气
+Traceback (most recent call last):
+  File "G:\Interface\TestCase\test_weather.py", line 18, in test_weather
+    test2 = self.assertEqual(message,'Success !')
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\unittest\case.py", line 820, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\unittest\case.py", line 1193, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\unittest\case.py", line 665, in fail
+    raise self.failureException(msg)
+AssertionError: '接口一个星期前已经提示要停用,请更换新的接口,参照文档链接:https://www[42 chars]2884' != 'Success !'
+- 接口一个星期前已经提示要停用,请更换新的接口,参照文档链接:https://www.sojson.com/blog/305.html , 有问题请加QQ群:608222884
++ Success !
+
+2018-11-09 15:14:23,436 - test - INFO - 发件人姓名：lijiawei
+2018-11-09 15:14:23,436 - test - INFO - 发件人邮箱：1456470136@qq.com
+2018-11-09 15:14:23,437 - test - INFO - 收件人邮箱：lijiawei@quandashi.com
+2018-11-09 15:14:23,437 - test - ERROR - 邮件发送失败
+Traceback (most recent call last):
+  File "G:\Interface\Common\my_email.py", line 39, in mail
+    att1 = MIMEText(open(file, 'rb').read(), 'base64', 'utf-8')
+FileNotFoundError: [Errno 2] No such file or directory: 'G:\\Interface\\report/xxx接口自动化测试报告.html'

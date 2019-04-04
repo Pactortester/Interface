@@ -30,17 +30,17 @@ def mail():
         log1.info('发件人邮箱：%s' % sender)
         message['To']=';'.join(addressed_eamils)    # 括号里的对应收件人邮箱昵称、收件人邮箱账号
         log1.info('收件人邮箱：' + ';'.join(addressed_eamils))
-        message['Subject']=rq + "xxx接口自动化测试报告.html"    # 邮件的主题，也可以说是标题
+        message['Subject']=rq + "接口自动化测试报告.html"    # 邮件的主题，也可以说是标题
 
         # 邮件正文内容
-        message.attach(MIMEText('附件为xxx接口自动化测试报告.html', 'plain', 'utf-8'))
+        message.attach(MIMEText('附件为接口自动化测试报告.html', 'plain', 'utf-8'))
 
         # 构造附件1，传送当前目录下的 test.txt 文件
         att1 = MIMEText(open(file, 'rb').read(), 'base64', 'utf-8')
         log1.info('读取附件')
         att1["Content-Type"] = 'application/octet-stream'
         # 这里的filename可以任意写，写什么名字，邮件中显示什么名字
-        att1.add_header("Content-Disposition", "attachment", filename=("gbk", "", "xxx接口自动化测试报告.html"))
+        att1.add_header("Content-Disposition", "attachment", filename=("gbk", "", "接口自动化测试报告.html"))
         # 附件名称非中文时的写法
         # att["Content-Disposition"] = 'attachment; filename="test.html")'
         message.attach(att1)
